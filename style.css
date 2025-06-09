@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: #100d0d;
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.apply_box{
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+    border-radius: 10px;
+}
+
+.title_box{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.title_box img{
+    height: 45px;
+}
+
+.title_small{
+    font-size: 20px;
+}
+
+.form_container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form_control{
+    display: flex;
+    flex-direction: column;
+}
+
+.email_error{
+    margin-top: 5px;
+    color: red;
+}
+
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+input,select,textarea{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px
+}
+
+input:focus{
+    outline-color: rgb(255, 0, 0);
+}
+
+.button_container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+button{
+    background-color: red;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 6px;
+    /* transition: 0.3s ease-in; */
+}
+
+button:hover{
+    background-color: #5b5b5b;
+    border: 2px solid red;
+    /* transition: 0.3s ease-out; */
+    cursor: pointer;
+
+}
+
+.textarea_control{
+    grid-column: 1/span 2;
+}
+
+.textarea_control textarea{
+    width: 100%;
+}
+
+.list_container{
+    max-width: 600px;
+    min-height: 150px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+    border-radius: 10px;
+}
+
+.to_list{
+    width: 400px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+
+}
+
+.to_list img{
+    height: 35px;
+}
+.row{
+    margin-top: 10px;
+    background: #ffefea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+
+}
+
+#input_box{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    
+}
+
+.add_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    width: 20px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px ;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}
+
+@media (max-width: 480px){
+    .textarea_control{
+    grid-column: 1/span 1;
+    }   
+    .container{
+        flex-direction: column;
+    }
+    .to_list{
+        width: 350px;
+    }
+}
